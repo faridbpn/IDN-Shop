@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:skl_pertama_for_real/pages/HomePage.dart';
 import 'package:skl_pertama_for_real/pages/cartPage.dart';
 import 'package:skl_pertama_for_real/pages/itemPage.dart';
+import 'package:skl_pertama_for_real/pages/LoginPage.dart';
+import 'package:skl_pertama_for_real/pages/RegisterPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,11 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       routes: {
-        "/": (context) => Homepage(),
+        "/": (context) => LoginPage(),
         "cartPage": (context) => CartPage(),
         "itemPage": (context) => ItemPage(),
+        "registerPage": (context) => RegisterPage(),
       },
-
     );
   }
 }
