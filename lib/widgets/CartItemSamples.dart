@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class CartItemSamples extends StatelessWidget {
@@ -6,12 +6,33 @@ class CartItemSamples extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // List produk beserta gambar
+    final List<Map<String, String>> products = [
+      {
+        'title': 'Gun',
+        'image': '1.png',
+      },
+      {
+        'title': 'Furniture',
+        'image': '2.png',
+      },
+      {
+        'title': 'Food',
+        'image': '3.png',
+      },
+      {
+        'title': 'Electronic',
+        'image': '4.png',
+      },
+    ];
+
     return Column(
       children: [
-        for (int i = 1; i < 3; i++)
+        // Loop melalui setiap produk dalam list
+        for (var product in products)
           Container(
             height: 110,
-            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
@@ -21,31 +42,31 @@ class CartItemSamples extends StatelessWidget {
                 Radio(
                   value: "",
                   groupValue: "",
-                  activeColor: Color(0xFF4C53A5),
+                  activeColor: const Color(0xFF4C53A5),
                   onChanged: (index) {},
                 ),
                 Container(
                   height: 70,
                   width: 70,
-                  margin: EdgeInsets.only(right: 15),
-                  child: Image.asset('images/$i.jpeg'),
+                  margin: const EdgeInsets.only(right: 15),
+                  child: Image.asset('images/${product['image']}'),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Product Title',
-                        style: TextStyle(
+                        product['title']!,  // Menampilkan judul produk dari list
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF4C53A5),
                         ),
                       ),
-                      Text(
-                        "\$55",
+                      const Text(
+                        "\$55",  // Harga tetap untuk contoh
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -55,9 +76,9 @@ class CartItemSamples extends StatelessWidget {
                     ],
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,8 +108,8 @@ class CartItemSamples extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            child: Text(
+                            margin: const EdgeInsets.symmetric(horizontal: 10),
+                            child: const Text(
                               "01",
                               style: TextStyle(
                                 fontSize: 16,

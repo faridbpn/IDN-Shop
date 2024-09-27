@@ -36,7 +36,7 @@ class CartPage extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: const Color(0xFF4C53A5),
+                          color: Color.fromRGBO(255, 181, 51, 1),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: const Icon(
@@ -49,7 +49,7 @@ class CartPage extends StatelessWidget {
                         child: Text(
                           'Add Coupon Code',
                           style: TextStyle(
-                            color: Color(0xFF4C53A5),
+                            color: Color.fromRGBO(72, 74, 185, 1),
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),

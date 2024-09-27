@@ -19,7 +19,7 @@ class HomeAppBar extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
-              'IDN Shop',
+              'Tumbas',
               style: TextStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.bold,
@@ -38,10 +38,10 @@ class HomeAppBar extends StatelessWidget {
             ),
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, "cartPage");
+                Navigator.pushNamed(context, 'chatPage');
               },
               child: const Icon(
-                Icons.shopping_bag_outlined,
+                Icons.chat,
                 size: 32,
                 color: Color(0xFF4C53A5),
               ),
